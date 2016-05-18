@@ -7,7 +7,12 @@ public class Amministratore {
 	@Id 
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
-	
+           
+           
+           
+           private FINAL int bo;
+           
+           
 	private String nome;
 	private String cognome;
 	@Column(nullable = false)
