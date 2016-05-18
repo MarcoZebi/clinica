@@ -1,24 +1,32 @@
 package facade;
 
+import java.util.Map;
+
 import persistence.Clinica;
+import persistence.TipologiaEsame;
 
 public class facadeUC1 {
-	
-	Clinica clinica=new Clinica();
-	
-	public void consultaOfferta(){
-		//?????
-		// clinica.stampaOfferta();
+
+	private Clinica clinica;
+
+	public facadeUC1() {
+		clinica=new Clinica();
+	}
+
+
+
+	public Map<String,TipologiaEsame> consultaOfferta(){
+		return clinica.getTipologieDiEsami();
 
 	}
 
 
 
-	public void stampaTipoEsame(String codice){
+	public TipologiaEsame stampaTipoEsame(String codice){
 
 
-		//?????
-		clinica.getTipologiaDiEsame(codice);
+
+		return clinica.getTipologiaDiEsame(codice);
 
 
 	}

@@ -4,11 +4,18 @@ import persistence.*;
 
 public class facadeUC4 {
 	
-	public void creaTipoEsami(/*??*/)
+	private Clinica clinica;
+	
+	public facadeUC4() {
+		clinica=new Clinica();
+	}
+	
+	public void creaTipoEsame(/*??*/)
 	{
 		TipologiaEsame tipoEsame;
 		tipoEsame=new TipologiaEsame();
-		Clinica clinica=new Clinica();
+		//????? settalo
+		
 		clinica.addTipoEsame(tipoEsame);
 	}
 

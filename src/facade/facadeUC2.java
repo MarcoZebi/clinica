@@ -5,7 +5,11 @@ import persistence.*;
 
 public class facadeUC2 {
 
-	Clinica clinica=new Clinica();
+	private Clinica clinica;
+
+	public facadeUC2() {
+		clinica=new Clinica();
+	}
 
 	public void creaEsame(String codTipoEsame,String codPaz,String codMed){
 		Medico medico;
@@ -15,10 +19,7 @@ public class facadeUC2 {
 		paziente=clinica.getPaziente(codPaz);
 		tipoEsame=clinica.getTipologiaDiEsame(codTipoEsame);
 		
-		Esame esame=new Esame();
-		esame.setMedico(medico);
-		esame.setPaziente(paziente);
-		esame.setTipo(tipoEsame);
+		Esame esame=new Esame(medico,paziente,tipoEsame);
 		
 		paziente.addEsame(esame);
 		medico.addEsame(esame);

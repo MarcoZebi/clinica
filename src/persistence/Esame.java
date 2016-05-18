@@ -26,6 +26,11 @@ public class Esame {
 	
 
 
+	public Esame(Medico medico, Paziente paziente, TipologiaEsame tipoEsame) {
+		this.medico=medico;
+		this.paziente=paziente;
+		this.tipo=tipoEsame;
+	}
 	public Map<String, String> getRisultati() {
 		return risultati;
 	}

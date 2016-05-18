@@ -37,9 +37,9 @@ public class Paziente {
 		this.esami.put(e.getCodice(),e);
 	}
 
-	public void getEsame(String key)
+	public Esame getEsame(String key)
 	{
-		this.esami.get(key);
+		return this.esami.get(key);
 	}
 	public String getNome() {
 		return nome;
