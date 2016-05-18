@@ -13,7 +13,7 @@ public class Amministratore {
 	@Column(nullable = false)
 	private String password;
 	
-	private int b,x;
+
 	
 	public String getNome() {
 		return nome;

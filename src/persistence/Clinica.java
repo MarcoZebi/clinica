@@ -8,22 +8,23 @@ import javax.persistence.*;
 
 public class Clinica {
 
-	
-	
+
+
 	private  final String nome="Clinica Privata";
-	
+
 
 	private Map<String,TipologiaEsame> tipologieDiEsami;
-	
-	
+
+
 	private Map<String,Paziente> anagraficaPazienti;
 
-	
+
 	private Map<String,Medico> medici;
-	
-	
+
+
 	private Map<String,Amministratore> amministratori;
 
+	private Map<String,Esame> esami;
 
 	public Map<String, TipologiaEsame> getTipologieDiEsami() {
 		return tipologieDiEsami;
@@ -78,6 +79,24 @@ public class Clinica {
 
 	public String getNome() {
 		return nome;
+	}
+
+	public void addTipoEsame(TipologiaEsame tipoEsame) {
+		this.tipologieDiEsami.put(tipoEsame.getCodice(),tipoEsame);
+	}
+
+	public Medico getMedico(String nome, String cognome) {
+		for(Medico m : this.medici.values())
+			if(m.getCognome().equals(cognome))
+				if(m.getNome().equals(nome))
+					return m;
+
+		return null;
+	}
+
+	public Esame getEsame(String codEsame) {
+		return this.esami.get(codEsame);
+		
 	}
 
 
