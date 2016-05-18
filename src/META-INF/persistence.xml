@@ -6,8 +6,9 @@
 		<class>it.uniroma3.db.products.Product</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-			METTI PASSWORD UTENTE
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/jpa" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="postgres" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/CLINICA" />
 
 			<!-- Hibernate properties -->
 	        <property name="hibernate.show_sql" value="true" />

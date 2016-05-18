@@ -7,13 +7,13 @@ public class Amministratore {
 	@Id 
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
-	
+
 	private String nome;
 	private String cognome;
 	@Column(nullable = false)
 	private String password;
 	
-	
+	private int b;
 	public String getNome() {
 		return nome;
 	}
